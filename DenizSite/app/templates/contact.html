@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<!--	gönder tuşuna basıldığında çalışan bir contact sayfası yap!	-->
+<body>
+	<div id="body">
+		<h1><span>iletisim</span></h1>
+		<form action="contact.html">
+			<input type="text" name="fname" id="fname" placeholder="Your name">
+			<input type="text" name="address" id="address" placeholder="adres">
+			<input type="text" name="email" id="email" placeholder="email">
+			<input type="text" name="phone" id="phone" placeholder="Telefon Numarası">
+			<textarea name="message" id="message" placeholder="Mesajınız"></textarea>
+			<input type="submit" name="send" id="send" value="Gönder">
+		</form>
+	</div>
+</body>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body_content %}
+
+
+
+
+<small>Enter message (optional) and click button "Send"</small>
+
+<div class="wrapper centered">
+    <form method="POST" action="{{ url_for('Login')  }}">
+  <article class="letter">
+    <div class="side">
+      <p>
+        <input type="email" placeholder="email:" name="email" >
+      </p>
+      <p>
+        <input type="password" placeholder="Your password" name="password">
+      </p>
+      <p>
+        <button id="submit">Gönder</button>
+      </p>
+    </div>
+  </article>
+  <div class="envelope front"></div>
+  <div class="envelope back"></div>
+</form>
+</div>
+
+<p class="result-message centered">Thank you for your message</p>
+
+
+{% endblock %}

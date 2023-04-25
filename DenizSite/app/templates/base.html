@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deniz Tümay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/mobile.css" media="screen and (max-width : 568px)">
+    <script type="text/javascript" src="/static/js/mobile.js"></script>
+</head>
+<body>
+<div id="header">
+    <a href="{{  url_for('index')  }}" class="logo">
+        <img src="/static/images/logo.png" alt="">
+    </a>
+    <ul id="navigation">
+
+<!--   li içine id veirp selected kısmının olduğumuz sayfaya göre işaretlenmesini sağla!     -->
+        <li class="selected">
+            <a href="{{  url_for('index')  }}">home</a>
+        </li>
+        <li class="selected">
+            <a href="{{  url_for('about')  }}">about</a>
+        </li>
+        <li class="selected">
+            <a href="{{  url_for('gallery')  }}">gallery</a>
+        </li>
+        <li class="selected">
+            <a href="{{  url_for('login')  }}">LOgin</a>
+        </li>
+        <li class="selected">
+            <a href="{{  url_for('contact')  }}">contact</a>
+        </li>
+    </ul>
+</div>
+
+{% block body_content %}d
+
+{% endblock %}
+
+
+<div id="footer">
+    <div class="social-icons-p">
+        <p>&copy; 2023 by Enes Baskale. All rights reserved.</p>
+		</div>
+        <div class="social-icons">
+            <ul>
+                <a href="https://www.instagram.com/f.deniztumay/" target="_blank" class="social-icon-instagram"><img
+                        src={{ url_for('static', filename='images/instagram.png') }} alt="Instagram"></a>
+            </ul>
+            <ul>
+                <a href="https://www.google.com/search?q=Psikolog+Faruk+Deniz+T%C3%BCmay&sxsrf=APwXEdcXGj98UUf5cmEBQDygWrYzlgRbfQ%3A1682162664332&ei=6MNDZLr0E_eFxc8Pote46AE&ved=0ahUKEwi6iL-gsL3-AhX3QvEDHaIrDh0Q4dUDCBA&uact=5&oq=Psikolog+Faruk+Deniz+T%C3%BCmay&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoHCCMQsAMQJzoRCC4QgAQQxwEQrwEQsAMQywFKBAhBGAFQriZYriZgnyhoAXAAeACAAZ8BiAGfAZIBAzAuMZgBAKABAqABAcgBA8ABAQ&sclient=gws-wiz-serp"
+                   target="_blank" class="social-icon-google"><img src={{ url_for('static',
+                    filename='images/google.png') }} alt="Google"></a>
+            </ul>
+
+            <ul>
+                <a href="https://www.psikologofisi.com/psikolog/faruk-deniz-tumay?" target="_blank" class="social-icon-psikolog"><img src = {{ url_for('static',
+                    filename='images/psikolog.png') }} alt="Psikolog"></a>
+            </ul>
+
+
+        </div>
+
+</div>
+</body>
+</html>

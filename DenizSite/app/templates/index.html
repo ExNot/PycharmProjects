@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<body>
+	<div id="body">
+		<div id="featured">
+			<img src="/static/images/thedeniz.jpg" alt="">
+			<div>
+				<h2>Faruk Deniz Tümay</h2>
+				<span>Doktora eğitimim devam ediyor</span>
+				<span>Talkshow programım var</span>
+				<span>Kurumsal bir klinikte terapi veriyorum.</span>
+				<a href="{{  url_for('about')  }}" class="more">Daha fazla!</a>
+
+			</div>
+		</div>
+		<ul>
+			<li>
+				<a href="{{  url_for('gallery')  }}">
+					<img src="/static/images/psikologfaruk.jpg" alt="">
+					<span>Psikolog</span>
+				</a>
+			</li>
+			<li>
+				<a href="{{  url_for('gallery')  }}">
+					<img src="/static/images/talkshowfaruk.jpg" alt="">
+					<span>Talk Show</span>
+				</a>
+			</li>
+			<li>
+				<a href="{{  url_for('gallery')  }}">
+					<img src="/static/images/muzsiyenfaruk.jpg" alt="">
+					<span>Müzik</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hey</title>
+</head>
+<body>
+<h1>{{ riddle.question }}</h1>
+
+<!--4 butonlu bir form oluşturuldu-->
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "0" %}
+     <button type="submit" name="answer" value="1">{{ "1" }}</button>
+     <button type="submit" name="answer" value="2">{{ "2" }}</button>
+     <button type="submit" name="answer" value="3">{{ "3" }}</button>
+     <button type="submit" name="answer" value="4">{{ "4" }}</button>
+    {% endif %}
+</form>
+
+
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "1" %}
+    <button type="submit" name="answer" value="2">{{ "2" }}</button>
+    <button type="submit" name="answer" value="4">{{ "4" }}</button>
+    <button type="submit" name="answer" value="3">{{ "3" }}</button>
+    <button type="submit" name="answer" value="5">{{ "5" }}</button>
+    {% endif %}
+</form>
+
+
+
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "2" %}
+    <button type="submit" name="answer" value="1000">{{ "1000" }}</button>
+    <button type="submit" name="answer" value="10">{{ "10" }}</button>
+    <button type="submit" name="answer" value="200">{{ "200" }}</button>
+    <button type="submit" name="answer" value="100">{{ "100" }}</button>
+    {% endif %}
+</form>
+
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "3" %}
+    <button type="submit" name="answer" value="105">{{ "105" }}</button>
+    <button type="submit" name="answer" value="10">{{ "100" }}</button>
+    <button type="submit" name="answer" value="110">{{ "110" }}</button>
+    <button type="submit" name="answer" value="100">{{ "95" }}</button>
+    {% endif %}
+</form>
+
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "4" %}
+    <button type="submit" name="answer" value="43">{{ "43" }}</button>
+    <button type="submit" name="answer" value="40">{{ "40" }}</button>
+    <button type="submit" name="answer" value="34">{{ "34" }}</button>
+    <button type="submit" name="answer" value="37">{{ "37" }}</button>
+    {% endif %}
+</form>
+
+
+<form method="POST" action="{% url 'check_answer' riddle.id %}">
+  {% csrf_token %}
+
+    {% if riddle.id == "5" %}
+    <button type="submit" name="answer" value="18">{{ "18" }}</button>
+    <button type="submit" name="answer" value="9">{{ "9" }}</button>
+    <button type="submit" name="answer" value="27">{{ "27" }}</button>
+    <button type="submit" name="answer" value="31.5">{{ "31.5" }}</button>
+    {% endif %}
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

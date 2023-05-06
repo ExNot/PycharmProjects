@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <!--eğer riddles boş değilse-->
+    {% if riddles %}
+        <ul>
+            {% for riddle in riddles %} <!--her riddle için bir list oluştur-->
+                <li><a href="{% url 'detail' riddle.id %}">{{ riddle.question }}</a></li>
+            {% endfor %}
+        </ul>
+    <!--riddles boş ise-->
+    {% else %}
+    <!--sonuç bulunamadı-->
+        <p>No results found.</p>
+        <button><a href="/home/">Home Page</a></button> <!--Home page için buton oluşturuldu-->
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles</title>
+</head>
+<body>
+    <h1>Articles</h1>
+    <ul>
+        {% for article in article_list %}   <!--article_list içinde bulunan title kadar article değişken isimli döngü oluştur-->
+        <li><a href="{% url 'article_detail' article %}">{{ article }}</a></li> <!--title'ı yazdırıp ve href verdik-->
+        {% endfor %}
+    </ul>
+</body>
+</html>

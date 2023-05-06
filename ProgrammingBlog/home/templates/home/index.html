@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Math Riddles</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<p>Riddle Site!</p>
+
+<!--Search bar için form oluşturuldu-->
+<form action="{% url 'search_results' %}" method="get">  <!--search_results metoduna yönlendirme yapıldı-->
+    {% csrf_token %}
+    <input type="text" name="search_query" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+
+<!--Bilmeceler için buttonlar oluşturuldu-->
+<button><a href="/home/1/">Riddle 1</a></button>
+<button><a href="/home/2/">Riddle 2</a></button>
+<button><a href="/home/3/">Riddle 3</a></button>
+<button><a href="/home/4/">Riddle 4</a></button>
+<button><a href="/home/5/">Riddle 5</a></button>
+<button><a href="/home/6/">Riddle 6</a></button>
+
+
+
+
+</body>
+</html>
